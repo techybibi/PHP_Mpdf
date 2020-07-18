@@ -14,68 +14,72 @@
 
 // Photo Upload
 
-$target_pic_path = "uploads/passPic/";  
-$target_pic_path = $target_pic_path.basename( $_FILES['filephoto']['name']);
+$target_pic_path = "uploads/passPic/";
+$target_file = $target_pic_path . basename($_FILES["filephoto"]["name"]);
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 && $imageFileType != "gif" ) {
   echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
   $uploadOk = 0;
 }
 else{
-    if(@move_uploaded_file($_FILES['filephoto']['tmp_name'], $target_pic_path)) {  
-        echo "File uploaded successfully!";  
-    } else{  
-        echo "Sorry, file not uploaded, please try again!";  
+    if (move_uploaded_file($_FILES['filephoto']['tmp_name'], __DIR__.'/uploads/passPic/'. $_FILES["filephoto"]['name'])) {
+        echo "Uploaded";
+    } else {
+       echo "File was not uploaded";
     }
 }
 
-// PDF Upload
+// PDF Upload   
 
-$target_pdf_path = "uploads/pdf/";  
-$target_pdf_path = $target_pdf_path.basename( $_FILES['file1']['name']);
+$target_pdf_path = "uploads/pdf/";
+$target_file = $target_pdf_path . basename($_FILES["file1"]["name"]);
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 if($imageFileType != "pdf") {
-  echo "Sorry, only pdf files are allowed.";
+  echo "Sorry, only PDF files are allowed.";
   $uploadOk = 0;
 }
 else{
-    if(@move_uploaded_file($_FILES['file1']['tmp_name'], $$target_pdf_path)) {  
-        echo "File uploaded successfully!";
-    } else{  
-        echo "Sorry, file not uploaded, please try again!";  
+    if (move_uploaded_file($_FILES['file1']['tmp_name'], __DIR__.'/uploads/pdf/'. $_FILES["file1"]['name'])) {
+        echo "Uploaded";
+    } else {
+       echo "File was not uploaded";
     }
 }
 
-// Sign Upload
+// Sign Upload   
 
-$target_sign_path = "uploads/sign/";  
-$target_sign_path = $target_sign_path.basename( $_FILES['filesig']['name']);
+$target_sign_path = "uploads/sign/";
+$target_file = $target_sign_path . basename($_FILES["filesig"]["name"]);
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 && $imageFileType != "gif" ) {
   echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
   $uploadOk = 0;
 }
 else{
-    if(@move_uploaded_file($_FILES['filesig']['tmp_name'], $target_sign_path)) {  
-        echo "File uploaded successfully!";  
-    } else{  
-        echo "Sorry, file not uploaded, please try again!";  
+    if (move_uploaded_file($_FILES['filesig']['tmp_name'], __DIR__.'/uploads/sign/'. $_FILES["filesig"]['name'])) {
+        echo "Uploaded";
+    } else {
+       echo "File was not uploaded";
     }
 }
 
-// Sign Gar Upload
+// GSign Upload   
 
-$target_Gsign_path = "uploads/signGar/";  
-$target_Gsign_path = $target_Gsign_path.basename( $_FILES['fileGsig']['name']);
+$target_Gsign_path = "uploads/signGar/";
+$target_file = $target_Gsign_path . basename($_FILES["fileGsig"]["name"]);
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 && $imageFileType != "gif" ) {
   echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
   $uploadOk = 0;
 }
 else{
-    if(@move_uploaded_file($_FILES['fileGsig']['tmp_name'], $target_Gsign_path)) {  
-        echo "File uploaded successfully!";  
-    } else{  
-        echo "Sorry, file not uploaded, please try again!";  
+    if (move_uploaded_file($_FILES['fileGsig']['tmp_name'], __DIR__.'/uploads/signGar/'. $_FILES["fileGsig"]['name'])) {
+        echo "Uploaded";
+    } else {
+       echo "File was not uploaded";
     }
 }
 
@@ -169,8 +173,6 @@ $fifthPm =$_POST['FifthPM'];
 
 $dDate =$_POST['Ddate'];
 $nameApplicant =$_POST['Nameofapplicant'];
-//$fileSig =$_POST['filesig'];
-//$fileGSig =$_POST['fileGsig'];
 
 
 
@@ -191,7 +193,7 @@ $data=[   'Photo' => $target_pic_path,
 'Address to which Communications are to be send: ' => $communicationAddress,
 'Phone No. With code.Res: Off: Mobile: ' => $communicationPhone,
 'Religion with denomination of Caste:' => $applicantReligion, 
-'Eligibility Documents: ' => $eligiblePdf, 
+'Eligibility Documents: ' => $target_pdf_path, 
 'Exam Passed 1: ' => $ePassed1, 
 'Exam Name 1: ' => $eName1, 
 'Year of study 1: ' => $yStudy1, 
@@ -243,9 +245,10 @@ $data=[   'Photo' => $target_pic_path,
 'Subject 5 maximum marks: ' => $fifthMm,  
 'subject 5 percentage of marks: ' => $fifthPm,  
 'Declaration Date: ' => $dDate,  
-'Name of Applicant: ' => $nameApplicant,  
-'Signature of applicant: ' => $fileSig,  
-'Signature of guardian: ' => $fileGSig]; 
+'Name of Applicant: ' => $nameApplicant,
+'Signature of applicant: ' => $target_sign_path,  
+'Signature of guardian: ' => $target_Gsign_path
+]; 
   
 print_r($data);
 
