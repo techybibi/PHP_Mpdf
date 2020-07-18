@@ -11,10 +11,17 @@
 
 //$photoapplicant =$_POST['filephoto'];
 //$photoapplicant =$_POST['filephoto'];
+$target_path = "/";  
+$target_path = $target_path.basename( $_FILES['filephoto']['name']);
+if(move_uploaded_file($_FILES['filephoto']['tmp_name'], $target_path)) {  
+    echo "File uploaded successfully!";  
+} else{  
+    echo "Sorry, file not uploaded, please try again!";  
+}
 
 
 
-
+// Image Upload
 
 $preferenceOne =$_POST['pre1'];
 $preferenceTwo =$_POST['pre2'];
@@ -179,7 +186,7 @@ $data=[   'Preference 1: ' => $preferenceOne,
 'Age and Date Of Birth: ' => $fileSig,  
 'Age and Date Of Birth: ' => $fileGSig]; 
   
-  echo $data;
+print_r($data);
 
 
 
