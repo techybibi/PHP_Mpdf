@@ -102,93 +102,93 @@ $nameApplicant =$_POST['Nameofapplicant'];
 
 //workspace2
 
-echo $preferenceOne;
-echo $preferenceTwo; 
-echo $preferenceThree;
-echo $applicantName; 
-echo $initialDetails;
-echo $applicantAge; 
-echo $placeOfBirth; 
-echo $guardianName; 
-echo $relationGuardian; 
-echo $occupationGuardian; 
-echo $annualIncome;
-echo $guardianAddress; 
-echo $guardianPhone; 
-echo $communicationAddress; 
-echo $communicationPhone;
-echo $applicantReligion; 
+echo $preferenceOne."</br>";
+echo $preferenceTwo."</br>"; 
+echo $preferenceThree."</br>";
+echo $applicantName."</br>"; 
+echo $initialDetails."</br>";
+echo $applicantAge."</br>"; 
+echo $placeOfBirth."</br>"; 
+echo $guardianName."</br>"; 
+echo $relationGuardian."</br>"; 
+echo $occupationGuardian."</br>"; 
+echo $annualIncome."</br>";
+echo $guardianAddress."</br>"; 
+echo $guardianPhone."</br>"; 
+echo $communicationAddress."</br>"; 
+echo $communicationPhone."</br>";
+echo $applicantReligion."</br>"; 
 //echo $eligiblePdf; 
 
 
-echo $ePassed1; 
-echo $eName1; 
-echo $yStudy1; 
-echo $bName1; 
-echo $yPassing1; 
-echo $regNO1;  
-echo $iName1;  
+echo $ePassed1."</br>"; 
+echo $eName1."</br>"; 
+echo $yStudy1."</br>"; 
+echo $bName1."</br>"; 
+echo $yPassing1."</br>"; 
+echo $regNO1."</br>";  
+echo $iName1."</br>";  
 
-echo $ePassed2;  
-echo $eName2;  
-echo $yStudy2;  
-echo $bNmae2;  
-echo $yPassing2;  
-echo $regNo2; 
-echo $iName2;  
+echo $ePassed2."</br>";  
+echo $eName2."</br>";  
+echo $yStudy2."</br>";  
+echo $bNmae2."</br>";  
+echo $yPassing2."</br>";  
+echo $regNo2."</br>"; 
+echo $iName2."</br>";  
 
-echo $appearTime;  
-echo $lChoice;  
-echo $consider;  
-echo $sAddress; 
+echo $appearTime."</br>";  
+echo $lChoice."</br>";  
+echo $consider."</br>";  
+echo $sAddress."</br>"; 
 
-echo $nameExamPass;  
-echo $yearOfPass;  
-echo $nameOfBoard;  
-echo $specifyRegno;  
+echo $nameExamPass."</br>";  
+echo $yearOfPass."</br>";  
+echo $nameOfBoard."</br>";  
+echo $specifyRegno."</br>";  
 
-echo $englishNta; 
-echo $englishMs;  
-echo $englishMm;  
-echo $englishPm; 
-
-
-echo $langNta; 
-echo $langMs;
-echo $langMm; 
-echo $langPm;  
+echo $englishNta."</br>"; 
+echo $englishMs."</br>";  
+echo $englishMm."</br>";  
+echo $englishPm."</br>"; 
 
 
-echo $firstNta;  
-echo $firstMs;  
-echo $firstMm; 
-echo $firstPm;  
+echo $langNta."</br>"; 
+echo $langMs."</br>";
+echo $langMm."</br>"; 
+echo $langPm."</br>";  
 
 
-echo $secondNta;  
-echo $secondMs;  
-echo $secondMm; 
-echo $secondPm;  
+echo $firstNta."</br>";  
+echo $firstMs."</br>";  
+echo $firstMm."</br>"; 
+echo $firstPm."</br>";  
 
 
-echo $thirdNta;  
-echo $thirdMs;  
-echo $thirdMm; 
-echo $thirdPm; 
+echo $secondNta."</br>";  
+echo $secondMs."</br>";  
+echo $secondMm."</br>"; 
+echo $secondPm."</br>";  
 
 
-echo $fourthNta;  
-echo $fourthMs; 
-echo $fourthMm; 
-echo $fourthPm;  
+echo $thirdNta."</br>";  
+echo $thirdMs."</br>";  
+echo $thirdMm."</br>"; 
+echo $thirdPm."</br>"; 
 
-echo $fifthNta;  
-echo $fifthMs;  
-echo $fifthMm;  
-echo $fifthPm;  
 
-echo $dDate;  
-echo $nameApplicant;  
+echo $fourthNta."</br>";  
+echo $fourthMs."</br>"; 
+echo $fourthMm."</br>"; 
+echo $fourthPm."</br>";  
+
+echo $fifthNta."</br>";  
+echo $fifthMs."</br>";  
+echo $fifthMm."</br>";  
+echo $fifthPm."</br>";  
+
+echo $dDate."</br>";  
+echo $nameApplicant."</br>";  
 //echo $fileSig;  
 //echo $fileGSig; 
 
