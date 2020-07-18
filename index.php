@@ -37,8 +37,12 @@
                   <hr/>
             <form action="process.php" method="POST">
                 <div class="form-group">	
-                 <table width="1000" border="0">
+                 <table width="1000" border="0" class="table table-striped">
                    <tbody>
+		              <tr>
+                       <td><label class="text-justify">Upload your photo(.JPEG)</label></td>
+                       <td><input class="field-center" type="file" name="filephoto" id="fileToUpload"></td>
+                     </tr>
                      <tr>
                          <td><label>Course Applied for with Subject. (Preference)</label></td>
                        <td></td>
@@ -115,8 +119,8 @@
                       <tr>
                        <td><label class="text-justify">If a member of any backward community eligible for the concession from the Harijan Welfare Dept.,
                            State, Caste, Sub Caste (attested copies of the
-                           community and income certificate to be attached(PDF).</label></td>
-                       <td><input type="file" name="file1" id="fileToUpload"></td>
+                           community and income certificate to be attached(PDF Upload).</label></td>
+                       <td><input class="field-center" type="file" name="file1" id="fileToUpload"></td>
                      </tr>
                      <tr>
                        <td>&nbsp;</td>
@@ -132,7 +136,7 @@
                      </tr>
                    </tbody>
                  </table>
-           <table width="1000" border="1">
+           <table width="1000" border="1" >
            <tbody>
              <tr>
                <th scope="col" class="text-center" >Exam Passed</th>
@@ -163,17 +167,12 @@
              </tr>
            </tbody>
          </table>
-          <table width="1000" border="0">
+					
+          <table width="1000" class="table table-striped mt-5">
            <tbody>
          
-             <tr>
-               <td>&nbsp;</td>
-               <td>&nbsp;</td>
-             </tr>
-             <tr>
-               <td>&nbsp;</td>
-               <td>&nbsp;</td>
-             </tr>
+         
+             
                
                       <tr>
                        <td><label>No. of times the applicant appeared for the qulifying exam with Year </label></td>
@@ -215,7 +214,7 @@
            </tbody>
          </table>
          
-         <table width="1000" border="1">
+         <table width="1000" border="1" class="mt-5">
            <tbody>
              <tr>
                <th scope="col" class="text-center" >Subjects</th>
@@ -293,7 +292,7 @@
          <p class="lead">
            The details given above are correct. If I am admitted to the college, I agree to abide by the rules and regulayions of the college.
          </p>
-             <table width="1000" border="0">
+             <table width="1000" border="0" class="table table-striped">
            <tbody>
              <tr>
                <td width="500"><label class="text-center">Date</label>&nbsp;<input placeholder="dd/mm/yy" type="text" class="form-control" name="Ddate"></td>
@@ -307,7 +306,7 @@
          <p class="lead text-center">
             <button type="button" class="btn btn-success">SUBMIT</button>
           </p>
-         <button type="button" class="btn btn-success">Success</button>
+        
          <hr/>
 
 
