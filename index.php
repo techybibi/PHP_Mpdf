@@ -32,6 +32,7 @@
 
 
         <div class="container">
+          <img class="rounded mx-auto d-block" src="http://pgmcollege.ac.in/wp-content/uploads/2019/01/logo.png">
             <h1 class="display-4 text-center"><u>College Admission Form</u></h3>
                 <p class="lead text-center">
                     Kindly Enter the Form & Submit. Download Printable Format <a href="" class="btn btn-primary">Here</a>
@@ -327,7 +328,7 @@ Address Line 2"></textarea></td>
          </div>
          </form>
         </div>
-
+                        <p class="text-center">All Right Recived | Developed By: <a href="https://talkbate.com/">Talkbate Digital Partners</a> | Hosted At:<a href="https://hostmargin.com/">Hostmargin</a></p>
     </body>
 
     </html>
