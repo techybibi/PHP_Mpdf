@@ -35,7 +35,7 @@
                     Kindly Enter the Form & Submit. Download Printable Format <a href="" class="btn btn-primary">Here</a>
                   </p>
                   <hr/>
-            <form action="process_test.php" method="POST">
+            <form action="process_test.php" method="POST" enctype="multipart/form-data">
                 <div class="form-group">	
                  <table width="1000" border="0" class="table table-striped">
                    <tbody>

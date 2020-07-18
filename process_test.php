@@ -11,12 +11,72 @@
 
 //$photoapplicant =$_POST['filephoto'];
 //$photoapplicant =$_POST['filephoto'];
-$target_path = "/";  
-$target_path = $target_path.basename( $_FILES['filephoto']['name']);
-if(move_uploaded_file($_FILES['filephoto']['tmp_name'], $target_path)) {  
-    echo "File uploaded successfully!";  
-} else{  
-    echo "Sorry, file not uploaded, please try again!";  
+
+// Photo Upload
+
+$target_pic_path = "uploads/passPic/";  
+$target_pic_path = $target_pic_path.basename( $_FILES['filephoto']['name']);
+if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+&& $imageFileType != "gif" ) {
+  echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+  $uploadOk = 0;
+}
+else{
+    if(@move_uploaded_file($_FILES['filephoto']['tmp_name'], $target_pic_path)) {  
+        echo "File uploaded successfully!";  
+    } else{  
+        echo "Sorry, file not uploaded, please try again!";  
+    }
+}
+
+// PDF Upload
+
+$target_pdf_path = "uploads/pdf/";  
+$target_pdf_path = $target_pdf_path.basename( $_FILES['file1']['name']);
+if($imageFileType != "pdf") {
+  echo "Sorry, only pdf files are allowed.";
+  $uploadOk = 0;
+}
+else{
+    if(@move_uploaded_file($_FILES['file1']['tmp_name'], $$target_pdf_path)) {  
+        echo "File uploaded successfully!";
+    } else{  
+        echo "Sorry, file not uploaded, please try again!";  
+    }
+}
+
+// Sign Upload
+
+$target_sign_path = "uploads/sign/";  
+$target_sign_path = $target_sign_path.basename( $_FILES['filesig']['name']);
+if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+&& $imageFileType != "gif" ) {
+  echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+  $uploadOk = 0;
+}
+else{
+    if(@move_uploaded_file($_FILES['filesig']['tmp_name'], $target_sign_path)) {  
+        echo "File uploaded successfully!";  
+    } else{  
+        echo "Sorry, file not uploaded, please try again!";  
+    }
+}
+
+// Sign Gar Upload
+
+$target_Gsign_path = "uploads/signGar/";  
+$target_Gsign_path = $target_Gsign_path.basename( $_FILES['fileGsig']['name']);
+if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+&& $imageFileType != "gif" ) {
+  echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+  $uploadOk = 0;
+}
+else{
+    if(@move_uploaded_file($_FILES['fileGsig']['tmp_name'], $target_Gsign_path)) {  
+        echo "File uploaded successfully!";  
+    } else{  
+        echo "Sorry, file not uploaded, please try again!";  
+    }
 }
 
 
@@ -39,7 +99,7 @@ $guardianPhone =$_POST['Gphone'];
 $communicationAddress =$_POST['Caddress'];
 $communicationPhone =$_POST['Cphone'];
 $applicantReligion =$_POST['Religion'];
-//$eligiblePdf =$_POST['file1'];
+
 
 
 $ePassed1 =$_POST['Exampassed1'];
@@ -114,7 +174,8 @@ $nameApplicant =$_POST['Nameofapplicant'];
 
 
 
-$data=[   'Preference 1: ' => $preferenceOne,
+$data=[   'Photo' => $target_pic_path,
+'Preference 1: ' => $preferenceOne,
 'Preference 2: ' => $preferenceTwo, 
 'Preference 3: ' => $preferenceThree,
 'Name in Full: ' => $applicantName, 
