@@ -304,7 +304,7 @@
                  
          <hr/>
          <p class="lead text-center">
-            <button type="button" class="btn btn-success">SUBMIT</button>
+            <button type="submit" class="btn btn-success">SUBMIT</button>
           </p>
         
          <hr/>
